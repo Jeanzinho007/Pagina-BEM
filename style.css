@@ -1,0 +1,120 @@
+/* ==========================================================
+   ESTILOS GENERALES DEL DOCUMENTO
+   ========================================================== */
+
+/* Estilo base del body: tipografía y color de fondo de toda la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: beige;
+}
+
+/* Contenedor que centra la tarjeta horizontalmente en la pantalla */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========================================================
+   BLOCK: cajita
+   Tarjeta principal que envuelve toda la información del producto
+   ========================================================== */
+
+.cajita {
+    width: 650px;              /* Ancho fijo de la tarjeta en pantallas grandes */
+    max-width: 100%;           /* Evita que se desborde en pantallas pequeñas */
+    margin: 50px auto;         /* Separación vertical y centrado horizontal */
+    padding: 20px;             /* Espacio interno entre el borde y el contenido */
+    background-color: white;
+    border-left: 5px solid #6500a8;  /* Franja de color distintivo a la izquierda */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra suave para dar profundidad */
+}
+
+/* Element: título del producto (dentro del block .cajita) */
+.bloque__titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Element: contenedor de la imagen del producto */
+.bloque__imagen {
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro de su columna */
+}
+
+/* Imagen del producto en sí */
+.lol {
+    width: 100%;
+    max-width: 250px;   /* Limita el tamaño máximo de la imagen */
+    border-radius: 10px;
+}
+
+/* Element: contenedor de la información textual (descripción, precio, estado, botón) */
+.bloque__info {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    height: 100%;
+}
+
+/* Element: descripción del producto */
+.bloque__descripcion {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Element: precio del producto */
+.bloque__precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6500a8;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================
+   Element: bloque__estado
+   Etiqueta que indica si el producto está disponible o no
+   (campo obligatorio en la tarjeta)
+   ========================================================== */
+.bloque__estado {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 20px;   /* Bordes redondeados tipo "pill" */
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Modifier: variante de estado cuando el producto SÍ está disponible */
+.bloque__estado--disponible {
+    background-color: #e6d1f7;
+    color: #6500a8;
+}
+
+/* Modifier: variante de estado cuando el producto está agotado / no disponible */
+.bloque__estado--agotado {
+    background-color: #f8d7da;
+    color: #b02a37;
+}
+
+/* ==========================================================
+   Element: bloque__boton
+   Botón de compra del producto
+   ========================================================== */
+.bloque__boton {
+    background-color: #9b30ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+/* Estado hover del botón: color más oscuro al pasar el mouse */
+.bloque__boton:hover {
+    background-color: #7a1fd1;
+    color: white;
+}
